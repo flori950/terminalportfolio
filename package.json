@@ -57,5 +57,20 @@
       "eslint",
       "prettier --write"
     ]
+  },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "schedule": [
+      "before 6am on monday"
+    ],
+    "labels": [
+      "dependencies"
+    ],
+    "automerge": true,
+    "major": {
+      "automerge": false
+    }
   }
 }

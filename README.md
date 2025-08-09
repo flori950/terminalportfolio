@@ -4,6 +4,7 @@
 
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue?style=flat-square)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/81fdb91d-c06f-46c2-b18d-dfc6f090f281/deploy-status)](https://app.netlify.com/sites/terminal-sn/deploys)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg?style=flat-square)](https://renovatebot.com/)
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)
 
 My portfolio website in terminal version developed with React, TypeScript and Styled-Components. Multiple themes supported and keyboard shortcuts can be used for some functionalities.
@@ -25,6 +26,7 @@ Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfoli
 - View command history 📖
 - PWA and Offline Support 🔥
 - Well-tested ✅
+- **Automated dependency updates with Renovate Bot** 🤖
 
 ## Tech Stack
 
@@ -34,6 +36,7 @@ Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfoli
 **State Management** - [ContextAPI](https://reactjs.org/docs/context.html)  
 **Testing** - [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/)  
 **Deployment** - [Netlify](https://app.netlify.com/)
+**Dependency Management** - [Renovate Bot](https://renovatebot.com/) for automated updates
 
 ## Multiple Themes
 
@@ -46,6 +49,27 @@ Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfoli
 
 Currently, this website supports 6 themes. Type `themes` in the terminal for more info.
 ![terminal-portfolio-themes](https://user-images.githubusercontent.com/53733092/194221801-94f1c28b-4865-4b7f-a73e-d41132519bea.png)
+
+## Automated Dependency Management
+
+This project uses [Renovate Bot](https://renovatebot.com/) to automatically keep dependencies up to date. Renovate:
+
+- 🔄 **Automatically creates pull requests** when new versions of dependencies are available
+- 🏷️ **Organizes updates by type** (production deps, dev deps, testing, etc.)
+- 🔒 **Handles security updates** with high priority
+- ⚡ **Auto-merges safe updates** like dev dependencies and type definitions
+- 📅 **Runs on schedule** (Mondays at 6 AM) to avoid disruption
+- 🧪 **Groups related packages** (React, Vite, Testing tools) into single PRs
+
+### Configuration Files:
+- `renovate.json` - Main configuration with custom rules and grouping
+- `.renovaterc` - Simple fallback configuration
+- `.github/workflows/renovate.yml` - GitHub Actions workflow
+
+### Setting up Renovate (for repository maintainers):
+1. **For GitHub repositories**: Install the [Renovate GitHub App](https://github.com/apps/renovate)
+2. **For self-hosted**: Set up the GitHub Actions workflow with a `RENOVATE_TOKEN` secret
+3. **Manual trigger**: Use the "Renovate" workflow in GitHub Actions for immediate runs
 
 ## Lighthouse Score
 

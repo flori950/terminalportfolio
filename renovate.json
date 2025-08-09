@@ -1,0 +1,90 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":automergeDigest",
+    ":automergeMinor"
+  ],
+  "timezone": "Europe/Berlin",
+  "schedule": ["before 6am on monday"],
+  "labels": ["dependencies"],
+  "assignees": ["@me"],
+  "reviewers": ["@me"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "labels": ["dev-dependencies"],
+      "automerge": true,
+      "platformAutomerge": true
+    },
+    {
+      "matchPackagePatterns": ["^@types/"],
+      "labels": ["type-definitions"],
+      "automerge": true,
+      "platformAutomerge": true
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "labels": ["production-dependencies"],
+      "automerge": false,
+      "reviewers": ["@me"]
+    },
+    {
+      "matchPackageNames": ["react", "react-dom"],
+      "groupName": "React",
+      "labels": ["react-update"]
+    },
+    {
+      "matchPackagePatterns": ["^@vitejs/", "^vite"],
+      "groupName": "Vite",
+      "labels": ["vite-update"]
+    },
+    {
+      "matchPackagePatterns": ["^@testing-library/", "^vitest", "^jsdom"],
+      "groupName": "Testing",
+      "labels": ["testing-update"],
+      "automerge": true,
+      "platformAutomerge": true
+    },
+    {
+      "matchPackagePatterns": ["^eslint", "^prettier", "^@typescript-eslint/"],
+      "groupName": "Code Quality",
+      "labels": ["code-quality"],
+      "automerge": true,
+      "platformAutomerge": true
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "assignees": ["@me"],
+    "reviewers": ["@me"],
+    "automerge": false
+  },
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "commitMessageSuffix": "",
+  "prTitle": "{{commitMessagePrefix}} {{commitMessageAction}} {{commitMessageTopic}} {{commitMessageExtra}}{{commitMessageSuffix}}",
+  "prBodyDefinitions": {
+    "Package": "{{#if packageFileDir}}`{{{packageFileDir}}}`{{else}}`{{{packageFile}}}`{{/if}}",
+    "Update": "[{{displayFrom}} → {{displayTo}}]({{#if depName}}https://renovatebot.com/diffs/npm/{{replace '/' '%2f' depName}}/{{{currentVersion}}}/{{{newVersion}}}{{/if}})",
+    "New version": "{{#if displayTo}}**{{displayTo}}**{{else}}*unknown*{{/if}}"
+  },
+  "prBodyColumns": [
+    "Package",
+    "Update",
+    "New version"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "platformAutomerge": true,
+    "schedule": ["before 6am on monday"]
+  },
+  "separateMinorPatch": true,
+  "separateMajorMinor": true,
+  "rangeStrategy": "bump"
+}
