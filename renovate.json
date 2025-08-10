@@ -9,7 +9,6 @@
   ],
   "packageManager": "pnpm",
   "timezone": "Europe/Berlin",
-  "schedule": ["before 6am on monday"],
   "labels": ["dependencies"],
   "description": "Automated dependency updates",
   "assignees": ["@me"],
@@ -83,9 +82,7 @@
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
-    "platformAutomerge": true,
-    "schedule": ["before 6am on monday"],
-    "extends": ["schedule:nonOfficeHours"]
+    "platformAutomerge": true
   },
   "postUpdateOptions": ["pnpmDedupe"],
   "separateMinorPatch": true,
