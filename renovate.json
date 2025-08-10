@@ -11,8 +11,8 @@
   "timezone": "Europe/Berlin",
   "labels": ["dependencies"],
   "description": "Automated dependency updates",
-  "assignees": ["@me"],
-  "reviewers": ["@me"],
+  "assignees": ["flori950"],
+  "reviewers": ["flori950"],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
@@ -30,7 +30,7 @@
       "matchDepTypes": ["dependencies"],
       "labels": ["production-dependencies"],
       "automerge": false,
-      "reviewers": ["@me"]
+      "reviewers": ["flori950"]
     },
     {
       "matchPackageNames": ["react", "react-dom"],
@@ -59,8 +59,8 @@
   ],
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "assignees": ["@me"],
-    "reviewers": ["@me"],
+    "assignees": ["flori950"],
+    "reviewers": ["flori950"],
     "automerge": false
   },
   "prConcurrentLimit": 3,
