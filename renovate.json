@@ -65,10 +65,10 @@
   },
   "prConcurrentLimit": 3,
   "prHourlyLimit": 2,
+  "commitMessagePrefix": "{{#if isPin}}pin{{else}}{{#if isRollback}}revert{{else}}update{{/if}}{{/if}}",
   "commitMessageTopic": "{{depName}}",
-  "commitMessageExtra": "to {{newVersion}}",
-  "commitMessageSuffix": "",
-  "prTitle": "{{commitMessagePrefix}} {{commitMessageAction}} {{commitMessageTopic}} {{commitMessageExtra}}{{commitMessageSuffix}}",
+  "commitMessageAction": "to",
+  "commitMessageExtra": "{{#if isLockfileUpdate}}(lockfile){{else}}{{newVersion}}{{/if}}",
   "prBodyDefinitions": {
     "Package": "{{#if packageFileDir}}`{{{packageFileDir}}}`{{else}}`{{{packageFile}}}`{{/if}}",
     "Update": "[{{displayFrom}} → {{displayTo}}]({{#if depName}}https://renovatebot.com/diffs/npm/{{replace '/' '%2f' depName}}/{{{currentVersion}}}/{{{newVersion}}}{{/if}})",
