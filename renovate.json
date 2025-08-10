@@ -5,9 +5,9 @@
     ":dependencyDashboard",
     ":semanticCommits",
     ":automergeDigest",
-    ":automergeMinor"
+    ":automergeMinor",
+    "npm:unpublishSafe"
   ],
-  "packageManager": "pnpm",
   "timezone": "Europe/Berlin",
   "labels": ["dependencies"],
   "description": "Automated dependency updates",
