@@ -91,7 +91,7 @@ importers:
         specifier: ^22.0.0
         version: 22.0.0
       lint-staged:
-        specifier: ^13.2.3
+        specifier: ^13.3.0
         version: 13.3.0
       prettier:
         specifier: ^2.8.8
