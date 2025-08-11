@@ -3,19 +3,18 @@
 ![Terminal Portfolio Website by Florian Jäger](https://user-images.githubusercontent.com/53733092/194220661-e2ff8b4c-f64a-4b64-a836-c52fae6bbcda.png)
 
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue?style=flat-square)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/81fdb91d-c06f-46c2-b18d-dfc6f090f281/deploy-status)](https://app.netlify.com/sites/terminal-sn/deploys)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/flori950/terminalportfolio/ftp-deploy.yml?label=deployment&style=flat-square)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg?style=flat-square)](https://renovatebot.com/)
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)
 
 My portfolio website in terminal version developed with React, TypeScript and Styled-Components. Multiple themes supported and keyboard shortcuts can be used for some functionalities.
 
-This is a customized version of the original terminal portfolio by Sat Naing, adapted to showcase Florian Jäger's professional profile as a Cloud-Native Architect.
+A terminal-style portfolio website showcasing Florian Jäger's professional profile as a Cloud-Native Architect.
 
-Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfolio-website-with-react
+
+
 
 ## Demo
-
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=App&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - try it in your editor</a>
 
 ## Features
 
@@ -27,6 +26,7 @@ Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfoli
 - PWA and Offline Support 🔥
 - Well-tested ✅
 - **Automated dependency updates with Renovate Bot** 🤖
+- **Automatic FTP Deployment** 🚀
 
 ## Tech Stack
 
@@ -35,17 +35,10 @@ Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfoli
 **UI/UX** - [Figma](https://figma.com/)  
 **State Management** - [ContextAPI](https://reactjs.org/docs/context.html)  
 **Testing** - [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/)  
-**Deployment** - [Netlify](https://app.netlify.com/)
+**Deployment** - Automated FTP deployment via GitHub Actions
 **Dependency Management** - [Renovate Bot](https://renovatebot.com/) for automated updates
 
 ## Multiple Themes
-
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=App&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - Dark theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppLight&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - light theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppBlue&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - blue-matrix theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppEspresso&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - espresso theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppGreen&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - green-goblin theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppUbuntu&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - ubuntu theme</a><br/>
 
 Currently, this website supports 6 themes. Type `themes` in the terminal for more info.
 ![terminal-portfolio-themes](https://user-images.githubusercontent.com/53733092/194221801-94f1c28b-4865-4b7f-a73e-d41132519bea.png)
@@ -64,7 +57,23 @@ This project uses [Renovate Bot](https://renovatebot.com/) to automatically keep
 ### Configuration Files:
 - `renovate.json` - Main configuration with custom rules and grouping
 - `.renovaterc` - Simple fallback configuration
-- `.github/workflows/renovate.yml` - GitHub Actions workflow
+- `.github/workflows/renovate.yml` - GitHub Actions workflow for dependency updates
+- `.github/workflows/ftp-deploy.yml` - GitHub Actions workflow for automatic FTP deployment
+
+## Deployment
+
+This project uses GitHub Actions for automated FTP deployment. The deployment workflow:
+
+1. Triggers automatically on pushes to the main branch
+2. Sets up Node.js and pnpm
+3. Installs dependencies
+4. Builds the project
+5. Deploys the built files to the FTP server
+
+The deployment configuration is managed through GitHub Secrets for security:
+- `FTP_SERVER` - The FTP server address
+- `FTP_USERNAME` - FTP username
+- `FTP_PASSWORD` - FTP password
 
 ### Setting up Renovate (for repository maintainers):
 1. **For GitHub repositories**: Install the [Renovate GitHub App](https://github.com/apps/renovate)
@@ -74,7 +83,7 @@ This project uses [Renovate Bot](https://renovatebot.com/) to automatically keep
 ## Lighthouse Score
 
 <p align="center">
-<img width="710" alt="Sat Naing Terminal Lighthouse Score" src="public/lighthouse-result.svg">
+<img width="710" alt="Terminal Portfolio Lighthouse Score" src="public/lighthouse-result.svg">
 </p>
 
 ## Running Locally
@@ -82,13 +91,13 @@ This project uses [Renovate Bot](https://renovatebot.com/) to automatically keep
 Clone the project
 
 ```bash
-git clone https://github.com/satnaing/terminal-portfolio.git
+git clone https://github.com/flori950/terminalportfolio.git
 ```
 
 Go to the project directory
 
 ```bash
-cd terminal-portfolio
+cd terminalportfolio
 ```
 
 Remove remote origin
@@ -113,10 +122,9 @@ npm run dev
 
 Here are some inspiration for this kind of terminal website. Only some features and functionalities are inspired by these following websites. All codes are written on my own.
 
-- I built this repository using [Jinno](https://www.jinno.app/redirect?from=satnaing&redirect=vs)
 - [term m4tt72](https://term.m4tt72.com/)
 - [Forrest](https://fkcodes.com/)
 
 ## Author
 
-- [@satnaing](https://satnaing.dev)
+- [@flori950](https://github.com/flori950)
