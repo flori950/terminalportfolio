@@ -1,6 +1,6 @@
 # Terminal Portfolio Website by Florian Jäger
 
-![Terminal Portfolio Website by Florian Jäger](https://user-images.githubusercontent.com/53733092/194220661-e2ff8b4c-f64a-4b64-a836-c52fae6bbcda.png)
+![Terminal Portfolio Website by Florian Jäger]
 
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue?style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/flori950/terminalportfolio/ftp-deploy.yml?label=deployment&style=flat-square)
@@ -38,10 +38,7 @@ A terminal-style portfolio website showcasing Florian Jäger's professional prof
 **Deployment** - Automated FTP deployment via GitHub Actions
 **Dependency Management** - [Renovate Bot](https://renovatebot.com/) for automated updates
 
-## Multiple Themes
 
-Currently, this website supports 6 themes. Type `themes` in the terminal for more info.
-![terminal-portfolio-themes](https://user-images.githubusercontent.com/53733092/194221801-94f1c28b-4865-4b7f-a73e-d41132519bea.png)
 
 ## Automated Dependency Management
 
