@@ -28,7 +28,7 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: 📂 Sync files
+      - name: 📂 Deploy files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -36,3 +36,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /terminal-portfolio/
+          dangerous-clean-slate: true # Always clean the destination directory and upload all files
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+          state-name: .ftp-deploy-sync-state.json # Reset deployment state
