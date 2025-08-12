@@ -2,6 +2,10 @@
   "name": "florian-terminal-portfolio",
   "private": true,
   "version": "2.0.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
