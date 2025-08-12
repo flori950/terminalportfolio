@@ -58,8 +58,8 @@ importers:
         specifier: ^4.7.0
         version: 4.7.0(vite@4.5.14(@types/node@20.2.1)(terser@5.17.4))
       '@vitest/coverage-c8':
-        specifier: ^0.31.4
-        version: 0.31.4(vitest@0.31.4(jsdom@22.0.0)(terser@5.17.4))
+        specifier: ^0.33.0
+        version: 0.33.0(vitest@0.31.4(jsdom@22.0.0)(terser@5.17.4))
       eslint:
         specifier: ^8.57.1
         version: 8.57.1
@@ -1277,8 +1277,8 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@vitest/coverage-c8@0.31.4':
-    resolution: {integrity: sha512-VPx368m4DTcpA/P0v3YdVxl4QOSh1DbUcXURLRvDShrIB5KxOgfzw4Bn2R8AhAe/GyiWW/FIsJ/OJdYXCCiC1w==}
+  '@vitest/coverage-c8@0.33.0':
+    resolution: {integrity: sha512-DaF1zJz4dcOZS4k/neiQJokmOWqsGXwhthfmUdPGorXIQHjdPvV6JQSYhQDI41MyI8c+IieQUdIDs5XAMHtDDw==}
     deprecated: v8 coverage is moved to @vitest/coverage-v8 package
     peerDependencies:
       vitest: '>=0.30.0 <1'
@@ -1467,8 +1467,8 @@ packages:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
 
-  c8@7.13.0:
-    resolution: {integrity: sha512-/NL4hQTv1gBL6J6ei80zu3IiTrmePDKXKXOTLpHvcIWZTVYQlDhVWjjWvkhICylE8EwwnMVzDZugCvdx0/DIIA==}
+  c8@7.14.0:
+    resolution: {integrity: sha512-i04rtkkcNcCf7zsQcSv/T9EbUn4RXQ6mropeMcjFOsQXQ0iGLAr/xT6TImQg4+U9hmNpN9XdvPkjUL1IzbgxJw==}
     engines: {node: '>=10.12.0'}
     hasBin: true
 
@@ -2577,9 +2577,8 @@ packages:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
 
-  magic-string@0.30.0:
-    resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
-    engines: {node: '>=12'}
+  magic-string@0.30.17:
+    resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
   make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
@@ -4929,11 +4928,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-c8@0.31.4(vitest@0.31.4(jsdom@22.0.0)(terser@5.17.4))':
+  '@vitest/coverage-c8@0.33.0(vitest@0.31.4(jsdom@22.0.0)(terser@5.17.4))':
     dependencies:
       '@ampproject/remapping': 2.2.1
-      c8: 7.13.0
-      magic-string: 0.30.0
+      c8: 7.14.0
+      magic-string: 0.30.17
       picocolors: 1.1.1
       std-env: 3.3.3
       vitest: 0.31.4(jsdom@22.0.0)(terser@5.17.4)
@@ -4953,7 +4952,7 @@ snapshots:
 
   '@vitest/snapshot@0.31.4':
     dependencies:
-      magic-string: 0.30.0
+      magic-string: 0.30.17
       pathe: 1.1.0
       pretty-format: 27.5.1
 
@@ -5169,7 +5168,7 @@ snapshots:
 
   builtin-modules@3.3.0: {}
 
-  c8@7.13.0:
+  c8@7.14.0:
     dependencies:
       '@bcoe/v8-coverage': 0.2.3
       '@istanbuljs/schema': 0.1.3
@@ -6497,7 +6496,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.4
 
-  magic-string@0.30.0:
+  magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.4
 
@@ -7456,7 +7455,7 @@ snapshots:
       concordance: 5.0.4
       debug: 4.4.1(supports-color@5.5.0)
       local-pkg: 0.4.3
-      magic-string: 0.30.0
+      magic-string: 0.30.17
       pathe: 1.1.0
       picocolors: 1.1.1
       std-env: 3.3.3
