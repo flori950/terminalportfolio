@@ -1,10 +1,11 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { UserEvent } from "@testing-library/user-event/dist/types/setup/setup";
 import { render, screen, userEvent } from "../utils/test-utils";
 import Terminal, { commands } from "../components/Terminal";
+import { ReactElement } from "react";
 
 // setup function
-function setup(jsx: JSX.Element) {
+function setup(jsx: ReactElement) {
   return {
     user: userEvent.setup(),
     ...render(jsx),
@@ -156,7 +157,7 @@ describe("Terminal Component", () => {
 
     const projectNums = [1, 2, 3, 4, 5, 6, 7, 8];
     const socialNums = [1, 2, 3, 4, 5, 6];
-    
+
     projectNums.forEach(num => {
       it(`should redirect to project URL when user type 'projects go ${num}' cmd`, async () => {
         await user.type(terminalInput, `projects go ${num}{enter}`);

@@ -1,7 +1,7 @@
-import { createGlobalStyle, DefaultTheme } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 
-const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
+const GlobalStyle = createGlobalStyle`
   ${normalize}
   
   *, ::before, ::after {
