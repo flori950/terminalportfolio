@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     setSelectedTheme(theme);
-  }, [themeLoaded]);
+  }, [themeLoaded, theme]);
 
   // Update meta tag colors when switching themes
   useEffect(() => {
@@ -42,7 +42,7 @@ function App() {
     metaThemeColor && metaThemeColor.setAttribute("content", themeColor);
     metaMsTileColor && metaMsTileColor.setAttribute("content", themeColor);
     maskIcon && maskIcon.setAttribute("color", themeColor);
-  }, [selectedTheme]);
+  }, [selectedTheme, theme.colors?.body]);
 
   const themeSwitcher = (switchTheme: DefaultTheme) => {
     setSelectedTheme(switchTheme);

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { UserEvent } from "@testing-library/user-event/dist/types/setup/setup";
+import type { UserEvent } from "@testing-library/user-event";
 import { render, screen, userEvent } from "../utils/test-utils";
 import Terminal, { commands } from "../components/Terminal";
 import { ReactElement } from "react";

@@ -68,13 +68,10 @@ const Terminal = () => {
   const [hints, setHints] = useState<string[]>([]);
   const [pointer, setPointer] = useState(-1);
 
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setRerender(false);
-      setInputVal(e.target.value);
-    },
-    [inputVal]
-  );
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setRerender(false);
+    setInputVal(e.target.value);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

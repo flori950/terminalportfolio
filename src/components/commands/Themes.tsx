@@ -27,7 +27,7 @@ const Themes: React.FC = () => {
     if (checkThemeSwitch(rerender, currentCommand, myThemes)) {
       themeSwitcher?.(theme[currentCommand[2]]);
     }
-  }, [arg, rerender, currentCommand]);
+  }, [arg, rerender, currentCommand, themeSwitcher]);
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
