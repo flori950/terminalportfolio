@@ -55,6 +55,42 @@ export const projectsData: Project[] = [
     desc: "Innovative drone logistics and automation project exploring autonomous delivery systems and aerial robotics. Features advanced flight control systems, route optimization, and automated package handling capabilities.",
     url: "https://florian-hunter.de/",
   },
+  {
+    id: 9,
+    title: "Blockchain Visualizer",
+    desc: "Interactive tool for visualizing blockchain structures and transactions. Helps users understand block creation, linking, and validation through dynamic visual feedback.",
+    url: "https://github.com/flori950/Blockchain-Visualizer",
+  },
+  {
+    id: 10,
+    title: "Notes App",
+    desc: "A modern, minimalistic notes application for organizing thoughts and tasks. Features intuitive UI, fast search, and persistent storage.",
+    url: "https://github.com/flori950/notesApp",
+  },
+  {
+    id: 11,
+    title: "Currency Exchange",
+    desc: "Web app for real-time currency conversion and exchange rate tracking. Supports multiple currencies and historical data visualization.",
+    url: "https://github.com/flori950/currency_exchange",
+  },
+  {
+    id: 12,
+    title: "Clock with Planet",
+    desc: "Creative clock application featuring planetary animations. Combines timekeeping with educational planetary system visualization.",
+    url: "https://github.com/flori950/clock_with_planet",
+  },
+  {
+    id: 13,
+    title: "CPU Designer",
+    desc: "Educational tool for designing and simulating simple CPUs. Enables users to experiment with instruction sets, registers, and logic circuits interactively.",
+    url: "https://github.com/flori950/cpu-designer",
+  },
+  {
+    id: 14,
+    title: "XSD Validator",
+    desc: "Online tool for validating XML files against XSD schemas. Provides instant feedback and error highlighting for XML data validation.",
+    url: "https://github.com/flori950/xsd_validaor",
+  },
 ];
 
 export const projectsIntro = `Technology & Innovation Projects 💻
