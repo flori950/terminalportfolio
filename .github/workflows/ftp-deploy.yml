@@ -39,13 +39,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: Clean workspace
+        run: |
+          echo "Cleaning workspace..."
+          rm -rf dist/
+          rm -rf node_modules/
+          echo "Workspace cleaned"
+
       - name: Install dependencies
         run: |
           echo "Installing dependencies..."
-          # First try without frozen-lockfile
-          pnpm install --no-frozen-lockfile
-          # After successful install, update the lockfile
-          pnpm install
+          pnpm install --frozen-lockfile
+          echo "Dependencies installed"
 
       - name: Build
         run: |
@@ -70,6 +75,7 @@ jobs:
           local-dir: ./dist/
           server-dir: /terminal-portfolio/
           dangerous-clean-slate: true
+          dry-run: false
           exclude: |
             **/.git*
             **/.git*/**
