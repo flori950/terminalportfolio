@@ -64,10 +64,10 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4(vite@7.1.12(@types/node@24.9.1)(terser@5.44.0)(yaml@2.8.1))
       '@vitest/coverage-v8':
-        specifier: ^4.0.1
+        specifier: ^4.0.2
         version: 4.0.3(vitest@4.0.3)
       '@vitest/ui':
-        specifier: ^4.0.1
+        specifier: ^4.0.2
         version: 4.0.3(vitest@4.0.3)
       eslint:
         specifier: ^9.38.0
